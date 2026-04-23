@@ -5,8 +5,15 @@ function calculateLove() {
     if (name1 && name2) {
         const hash = (name1 + name2).split('').reduce((acc, char)=> acc + char.charCodeAt(0),0);
         const lovePorcentage = hash % 101;
-        document.getElementById("result").style.color = `green`;
-        document.getElementById("result").textContent = `Tienes un ${lovePorcentage}% de compatibilidad`;
+        if (lovePorcentage > 70) {
+            document.getElementById("result").style.color = `green`;
+        } else if (lovePorcentage > 40) {
+            document.getElementById("result").style.color = `orange`;
+
+        }else{
+            document.getElementById("result").style.color = 'red';  
+        }
+            document.getElementById("result").textContent = `Tienes un ${lovePorcentage}% de compatibilidad`;
     } else{
         document.getElementById("result").style.color = 'red';
         document.getElementById("result").textContent = `Por favor, ingresa ambos nombres`;
