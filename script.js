@@ -7,13 +7,14 @@ function calculateLove() {
         const lovePorcentage = hash % 101;
         if (lovePorcentage > 70) {
             document.getElementById("result").style.color = `green`;
+            document.getElementById("result").textContent = `!Increible¡ Tienes un ${lovePorcentage}% de compatibilidad`;
         } else if (lovePorcentage > 40) {
             document.getElementById("result").style.color = `orange`;
-
-        }else{
-            document.getElementById("result").style.color = 'red';  
-        }
             document.getElementById("result").textContent = `Tienes un ${lovePorcentage}% de compatibilidad`;
+        }else{
+            document.getElementById("result").style.color = `blue`;  
+            document.getElementById("result").textContent = `Tienes un ${lovePorcentage}%, mejor ni lo intentes xd`;
+        }
     } else{
         document.getElementById("result").style.color = 'red';
         document.getElementById("result").textContent = `Por favor, ingresa ambos nombres`;
