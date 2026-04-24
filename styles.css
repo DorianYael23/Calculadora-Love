@@ -56,7 +56,3 @@ dialog::backdrop {
     background-color: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(2px); /* Esto hace que el fondo se vea borroso y resalte más tu modal */
 }
-
-* {
-    outline: 1px solid red !important;
-}
