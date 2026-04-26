@@ -39,5 +39,5 @@ document.getElementById("btnCerrar").addEventListener("click", () => {
     name1.value = "";
     name2.value = "";
 
-    document.getElementById("result").textContent = ";"
+    document.getElementById("result").textContent = ""
 });
